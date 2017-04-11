@@ -30,4 +30,4 @@ before_install:
 
 install: ./gradlew clean build
 script:
-- chmod +x ./gradlew check
+- chmod +x ./gradlew
