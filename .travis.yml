@@ -1,4 +1,7 @@
 language: android
+jdk: oraclejdk8
+sudo: false
+
 android:
   components:
     - tools
@@ -6,6 +9,25 @@ android:
     - android-25
     - extra-android-support
     - extra-android-m2repository
+    - extra-google-m2repository
+    - extra-google-google_play_services
 
+branches:
+  only:
+    - master
+
+notifications:
+  email: true
+
+before_install:
+
+  # for gradle output style
+  - export TERM=dumb
+
+  # environment info
+  - ./gradlew -v
+  - uname -a
+
+install: ./gradlew clean build
 script:
-- chmod +x ./gradlew
+- chmod +x ./gradlew check
