@@ -494,6 +494,11 @@ public class SmartLockManager implements GoogleApiClient.ConnectionCallbacks,
         void signInRequired();
     }
 
+    public void GotoSmartLockSettings(Activity activity){
+//        Intent intent = new Intent(activity, com.google.android.gms.auth.api.credentials.ui.CredentialsSettingsActivity);
+
+    }
+
     //endregion
 
     //region Singleton pattern
